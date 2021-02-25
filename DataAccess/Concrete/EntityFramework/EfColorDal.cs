@@ -14,7 +14,9 @@ namespace DataAccess.Concrete.EntityFramework
             throw new NotImplementedException();
         }
 
-        public void Delete(Color Entity)
+        
+
+        public void Delete(Color entity)
         {
             throw new NotImplementedException();
         }

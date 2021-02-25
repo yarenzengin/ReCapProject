@@ -12,6 +12,7 @@ namespace Business.Abstract
         List<Car> GetCarsByColordId(int id);
 
         void Add(Car entity);
+        void Delete(Car entity);
 
     }
 }

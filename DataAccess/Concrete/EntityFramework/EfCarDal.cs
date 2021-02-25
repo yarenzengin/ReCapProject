@@ -11,23 +11,26 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCarDal : ICarDal
     {
-        public void Add(Car entity)
+        public void Add(Car car)
         {
             using (RentCarContext context = new RentCarContext())
             {
-                var addedEntity = context.Entry(entity);
+                var addedEntity = context.Entry(car);
                 addedEntity.State = EntityState.Added;
                 context.SaveChanges();
             }
         }
 
-        public void Delete(Car entity)
+        public void Delete(Car car)
         {
             using (RentCarContext context = new RentCarContext())
             {
-                var deletedEntity = context.Entry(entity);
+                var deletedEntity = context.Entry(car);
                 deletedEntity.State = EntityState.Deleted;
                 context.SaveChanges();
+
+                //context.Cars.Remove(context.Cars.SingleOrDefault(c => c.CarId == car.CarId));
+                //context.SaveChanges();
             }
         }
 
@@ -48,11 +51,11 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public void Update(Car entity)
+        public void Update(Car car)
         {
             using (RentCarContext context = new RentCarContext())
             {
-                var updatedEntity = context.Entry(entity);
+                var updatedEntity = context.Entry(car);
                 updatedEntity.State = EntityState.Modified;
                 context.SaveChanges();
             }

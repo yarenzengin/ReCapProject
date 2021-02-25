@@ -11,20 +11,33 @@ namespace Business.Concrete
     {
 
         ICarDal _carDal;
-        IRuleService _ruleService;
         
-        public CarManager(ICarDal carDal, IRuleService ruleService )
+        
+        public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
-            _ruleService = ruleService;
+            
            
         }
 
         public void Add(Car car)
         {
-            _ruleService.NameLength(car);
-            _ruleService.Price(car);
+            if (car.Description.Length < 2 || car.DailyPrice < 0)
+            {
+                Console.WriteLine ("Bu arabayı ekleyemezsiniz.Araba adı minimum 2  ve fiyatı 0 dan büyük olmalıdır ");
+            }
             _carDal.Add(car);
+            Console.WriteLine("araba eklendi");
+            
+        }
+
+       
+
+        public void Delete(Car car)
+        {
+            _carDal.Delete(car);
+            Console.WriteLine("araba silindi");
+
         }
 
         public List<Car> GetAll()

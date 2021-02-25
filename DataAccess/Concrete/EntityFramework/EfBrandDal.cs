@@ -14,7 +14,7 @@ namespace DataAccess.Concrete.EntityFramework
             throw new NotImplementedException();
         }
 
-        public void Delete(Brand Entity)
+        public void Delete(Brand entity)
         {
             throw new NotImplementedException();
         }
