@@ -22,7 +22,7 @@ namespace Business.Concrete
 
         public void Add(Car car)
         {
-            if (car.Description.Length < 2 || car.DailyPrice < 0)
+            if (car.Description.Length < 2 && car.DailyPrice < 0)
             {
                 Console.WriteLine ("Bu arabayı ekleyemezsiniz.Araba adı minimum 2  ve fiyatı 0 dan büyük olmalıdır ");
             }
