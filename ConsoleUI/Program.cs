@@ -13,18 +13,48 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            //CarTest();
+            //BrandTest();
+
+            // ColorTest();
+            ColorManager colorManager = new ColorManager(new EfColorDal());
+            colorManager.Update(new Color { ColorId = 5, ColorName = "sarı" });
+
+        }
+
+        private static void ColorTest()
+        {
+            ColorManager colorManager = new ColorManager(new EfColorDal());
+            Color color = new Color() { ColorId = 5, ColorName = "turuncu" };
+            colorManager.Add(color);
+        }
+
+        private static void BrandTest()
+        {
+            BrandManager brandManager = new BrandManager(new EfBrandDal());
+            Brand brand1 = new Brand() { BrandId = 7, BrandName = "yaren" };
+            brandManager.Add(brand1);
+            brandManager.Delete(new Brand { BrandId = 1, BrandName = "BMW" });
+            foreach (var brand in brandManager.GetAll())
+            {
+                Console.WriteLine(brand.BrandName);
+
+            }
+        }
+
+        private static void CarTest()
+        {
             CarManager carManager = new CarManager(new EfCarDal());
-            Car car1 = new Car() {BrandId = 3, Description = "Opel", DailyPrice = 90000, ModelYear = 1999 ,ColorId = 2};
-            carManager.Add(car1);
-            Console.WriteLine("Araba adı : " + car1.Description + " Arabanın değeri :  " + car1.DailyPrice);
-
-            //foreach (var car in carManager.GetAll())
-            //{
-            //    Console.WriteLine(car.);
-            //    //Console.WriteLine( "Car Id : " + car.Id  +  " Car Name : " + car.Description);
-            //}
+            Car car1 = new Car() { BrandId = 2, Description = "volkswagen", DailyPrice = 100000, ModelYear = 2009, ColorId = 3 };
+            carManager.Delete(new Car { CarId = 1002, BrandId = 1, ColorId = 3, ModelYear = 1997, DailyPrice = 80000, Description = "BMW" });
 
 
+            foreach (var car in carManager.GetCarDetails())
+            {
+                Console.WriteLine(car.Description + "/" + car.ColorName);
+                //Console.WriteLine( "Car Id : " + car.Id  +  " Car Name : " + car.Description);
+                //Console.WriteLine("Araba adı : " + car1.Description + " Arabanın değeri :  " + car1.DailyPrice);
+            }
         }
     }
 }

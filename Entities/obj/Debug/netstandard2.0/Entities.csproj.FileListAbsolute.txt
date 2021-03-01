@@ -7,3 +7,6 @@ C:\Users\Yaren\source\repos\ReCapProject\Entities\obj\Debug\netstandard2.0\Entit
 C:\Users\Yaren\source\repos\ReCapProject\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\Users\Yaren\source\repos\ReCapProject\Entities\obj\Debug\netstandard2.0\Entities.pdb
 C:\Users\Yaren\source\repos\ReCapProject\Entities\obj\Debug\netstandard2.0\Entities.csprojAssemblyReference.cache
+C:\Users\Yaren\source\repos\ReCapProject\Entities\bin\Debug\netstandard2.0\Core.dll
+C:\Users\Yaren\source\repos\ReCapProject\Entities\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\Yaren\source\repos\ReCapProject\Entities\obj\Debug\netstandard2.0\Entities.csproj.CopyComplete
