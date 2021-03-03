@@ -6,6 +6,9 @@ using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
 using System.Collections.Generic;
 using DataAccess.Concrete.EntityFramework;
+using Core.Utilities;
+using Core.DataAccess;
+using Core.Entities;
 
 namespace ConsoleUI
 {
@@ -13,12 +16,12 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            //CarTest();
+            CarTest();
             //BrandTest();
 
             // ColorTest();
-            ColorManager colorManager = new ColorManager(new EfColorDal());
-            colorManager.Update(new Color { ColorId = 5, ColorName = "sarı" });
+            //ColorManager colorManager = new ColorManager(new EfColorDal());
+            //colorManager.Update(new Color { ColorId = 5, ColorName = "sarı" });
 
         }
 
@@ -45,16 +48,30 @@ namespace ConsoleUI
         private static void CarTest()
         {
             CarManager carManager = new CarManager(new EfCarDal());
-            Car car1 = new Car() { BrandId = 2, Description = "volkswagen", DailyPrice = 100000, ModelYear = 2009, ColorId = 3 };
-            carManager.Delete(new Car { CarId = 1002, BrandId = 1, ColorId = 3, ModelYear = 1997, DailyPrice = 80000, Description = "BMW" });
-
-
-            foreach (var car in carManager.GetCarDetails())
+            //Car car1 = new Car() { BrandId = 2, Description = "volkswagen", DailyPrice = 100000, ModelYear = 2009, ColorId = 3 };
+            //carManager.Delete(new Car { CarId = 1002, BrandId = 1, ColorId = 3, ModelYear = 1997, DailyPrice = 80000, Description = "BMW" });
+            var result = carManager.GetCarDetails();
+            if (result.Success == true)
             {
-                Console.WriteLine(car.Description + "/" + car.ColorName);
-                //Console.WriteLine( "Car Id : " + car.Id  +  " Car Name : " + car.Description);
-                //Console.WriteLine("Araba adı : " + car1.Description + " Arabanın değeri :  " + car1.DailyPrice);
+                foreach (var car in result.Data)
+                {
+                    Console.WriteLine(car.Description + "/" + car.ColorName);
+                }
             }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+            }
+
+            //foreach (var car in carManager.GetCarDetails())
+            //{
+            //    Console.WriteLine(car.Description + "/" + car.ColorName);
+            //    //Console.WriteLine( "Car Id : " + car.Id  +  " Car Name : " + car.Description);
+            //    //Console.WriteLine("Araba adı : " + car1.Description + " Arabanın değeri :  " + car1.DailyPrice);
+            //}
         }
-    }
+
 }
+    
+
