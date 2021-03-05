@@ -35,13 +35,21 @@ namespace ConsoleUI
         private static void BrandTest()
         {
             BrandManager brandManager = new BrandManager(new EfBrandDal());
-            Brand brand1 = new Brand() { BrandId = 7, BrandName = "yaren" };
-            brandManager.Add(brand1);
-            brandManager.Delete(new Brand { BrandId = 1, BrandName = "BMW" });
-            foreach (var brand in brandManager.GetAll())
+            //Brand brand1 = new Brand() { BrandId = 7, BrandName = "yaren" };
+            //brandManager.Add(brand1);
+            //brandManager.Delete(new Brand { BrandId = 1, BrandName = "BMW" });
+            var result = brandManager.GetAll();
+            if (result.Success == true)
             {
-                Console.WriteLine(brand.BrandName);
+                foreach (var brand in result.Data)
+                {
+                    Console.WriteLine(brand.BrandId + "/" + brand.BrandName);
+                }
 
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
             }
         }
 

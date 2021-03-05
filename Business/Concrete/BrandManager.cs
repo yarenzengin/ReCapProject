@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
@@ -19,41 +21,45 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
-        public void Add(Brand brand)
+        public IResult Add(Brand brand)
         {
             using (RentCarContext context = new RentCarContext())
             {
                 context.Brands.Add(brand);
-                Console.WriteLine(  "marka eklendi");
+                return new SuccessResult(Messages.BrandAdded);
+                //Console.WriteLine(  "marka eklendi");
                 context.SaveChanges();
             }
         }
 
-        public void Delete(Brand brand)
+        public IResult Delete(Brand brand)
         {
             using (RentCarContext context = new RentCarContext())
             {
                 _brandDal.Delete(brand);
-                Console.WriteLine("marka silindi");
+                return new SuccessResult(Messages.BrandDeleted);
+                //Console.WriteLine("marka silindi");
             }
         }
 
-        public List<Brand> GetAll()
+        public IDataResult<List<Brand>> GetAll()
         {
-            return _brandDal.GetAll();
+            return new SuccessDataResult<List<Brand>>(_brandDal.GetAll(), Messages.BrandsListed);
+            
         }
 
-        public List<Brand> GetById(int id)
+        public IDataResult<Brand> GetById(int id)
         {
-            return _brandDal.GetAll(c => c.BrandId == id);
+            return new SuccessDataResult<Brand>(_brandDal.Get(c => c.BrandId == id));
         }
 
-        public void Update(Brand brand)
+        public IResult Update(Brand brand)
         {
             using (RentCarContext context = new RentCarContext())
             {
                 _brandDal.Update(brand);
-                Console.WriteLine("marka güncellendi");
+                return new SuccessResult(Messages.BrandUpdted);
+                //Console.WriteLine("marka güncellendi");
             }
         }
     }

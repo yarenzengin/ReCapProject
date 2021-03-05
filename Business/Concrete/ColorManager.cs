@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -14,33 +16,37 @@ namespace Business.Concrete
         {
             _colorDal = colorDal;
         }
-        public void Add(Color color)
+        public IResult Add(Color color)
         {
             _colorDal.Add(color);
-            Console.WriteLine( "renk eklendi");
+            return new SuccessResult(Messages.ColorAdded);
+            //Console.WriteLine( "renk eklendi");
+
 
         }
 
-        public void Delete(Color color)
+        public IResult Delete(Color color)
         {
             _colorDal.Delete(color);
-            Console.WriteLine("renk silindi");
+            return new SuccessResult(Messages.ColorDeleted);
+            //Console.WriteLine("renk silindi");
         }
 
-        public List<Color> GetAll()
+        public IDataResult<List<Color>> GetAll()
         {
-            return _colorDal.GetAll();
+            return new SuccessDataResult<List<Color>>(_colorDal.GetAll());
         }
 
-        public List<Color> GetById(int id)
+        public IDataResult<Color> GetById(int id)
         {
-            return _colorDal.GetAll(cr => cr.ColorId == id);
+            return new SuccessDataResult<Color>(_colorDal.Get(cr => cr.ColorId == id));
         }
 
-        public void Update(Color color)
+        public IResult Update(Color color)
         {
             _colorDal.Update(color);
-            Console.WriteLine("renk güncellendi");
+            return new SuccessResult(Messages.ColorUpdated);
+            //Console.WriteLine("renk güncellendi");
         }
     }
 }
