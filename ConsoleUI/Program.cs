@@ -9,6 +9,7 @@ using DataAccess.Concrete.EntityFramework;
 using Core.Utilities;
 using Core.DataAccess;
 using Core.Entities;
+using Business.Constants;
 
 namespace ConsoleUI
 {
@@ -17,13 +18,53 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            CarTest();
+            //CarTest();
             //BrandTest();
-
+            //UserTest();
             // ColorTest();
-            //ColorManager colorManager = new ColorManager(new EfColorDal());
-            //colorManager.Update(new Color { ColorId = 5, ColorName = "sarı" });
+            //CustomerTest();
 
+
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            Rental rental = new Rental() { Id = 13, CarId = 2, CustomerId = 3, RentDate = DateTime.Now, ReturnDate = new DateTime(2021, 02, 03) };
+            rentalManager.Add(rental);
+            Console.WriteLine(Messages.RentalAdded);
+            
+            
+
+
+
+
+
+
+        }
+
+        private static void CustomerTest()
+        {
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            Customer customer = new Customer { CustomerId = 7, UserId = 7, CompanyName = " Faith " };
+            customerManager.Add(customer);
+            Console.WriteLine(Messages
+                .CustomerAdded);
+        }
+
+        private static void UserTest()
+        {
+            UserManager userManager = new UserManager(new EfUserDal());
+            User user = new User() { UserId = 7, FirstName = "şevval", LastName = "albayrak", Email = "sevvalalbayrak", Password = "bilemiyorumsevval" };
+            userManager.Add(user);
+            //userManager.Update(new User
+            //{
+            //    UserId = 5,
+            //    FirstName = "beyza",
+            //    LastName = "akyol",
+            //    Email = "beyzaakyol",
+            //    Password = "beyzakyoll"
+            //}
+
+
+               
+            Console.WriteLine(Messages.UserAdded);
         }
 
         private static void ColorTest()
@@ -31,6 +72,8 @@ namespace ConsoleUI
             ColorManager colorManager = new ColorManager(new EfColorDal());
             Color color = new Color() { ColorId = 5, ColorName = "turuncu" };
             colorManager.Add(color);
+            //ColorManager colorManager = new ColorManager(new EfColorDal());
+            //colorManager.Update(new Color { ColorId = 5, ColorName = "sarı" });
         }
 
         private static void BrandTest()
