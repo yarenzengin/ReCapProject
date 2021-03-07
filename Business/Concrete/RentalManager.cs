@@ -23,7 +23,7 @@ namespace Business.Concrete
             
             if (rental.ReturnDate == null)
             {
-                Console.WriteLine("bu araba kiralanamaz");
+                return new ErrorResult("bu araba kiralanamaz");
             }
            
                 _rentalDal.Add(rental);
