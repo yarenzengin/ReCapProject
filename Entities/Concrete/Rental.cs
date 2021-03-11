@@ -13,6 +13,6 @@ namespace Entities.Concrete
        
         public DateTime? RentDate { get; set; } = DateTime.Now;
 
-        public DateTime? ReturnDate { get; set; }
+        public string ReturnDate { get; set; }
     }
 }

@@ -18,17 +18,20 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            CarTest();
-            BrandTest();
+            //CarTest();
+            //BrandTest();
             //UserTest();
             // ColorTest();
             //CustomerTest();
 
-
+            DateTime dateTime = DateTime.Now;
+            string sqlFormattedDate = dateTime.ToString("2021-11-20");
             RentalManager rentalManager = new RentalManager(new EfRentalDal());
-            Rental rental = new Rental() { Id = 14, CarId = 2, CustomerId = 3, RentDate = DateTime.Now, ReturnDate = new DateTime(2021, 02, 03) };
-            rentalManager.Update(rental);
-            Console.WriteLine(Messages.RentalUpdated);
+           
+            Rental rental = new Rental() { Id = 15, CarId = 2, CustomerId = 5, ReturnDate = sqlFormattedDate };
+            rentalManager.Delete(rental);
+            Console.WriteLine(Messages.RentalDeleted);
+   
             
             
 
