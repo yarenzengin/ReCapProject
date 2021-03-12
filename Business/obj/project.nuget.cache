@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "J8KqJx236w4m/vZmf9XB11S+OXhyeCSV6H175jcy6XegTRwxfHgAGhC3G7lPgWRl2hHGSS7iPt+RvE1RkjI8Pw==",
+  "dgSpecHash": "owuPDoOp87UtPscHMI+Ub9RO3NDQUlwT5lv6k04j2KF6vroxmlLHFjOTXsTRhqmyKmx/Oi1xoIRUFiaYMoQQ5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yaren\\source\\repos\\ReCapProject\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yaren\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\Yaren\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.0\\autofac.extras.dynamicproxy.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yaren\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\Yaren\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
+    "C:\\Users\\Yaren\\.nuget\\packages\\fluentvalidation\\9.5.2\\fluentvalidation.9.5.2.nupkg.sha512",
     "C:\\Users\\Yaren\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Yaren\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\Yaren\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

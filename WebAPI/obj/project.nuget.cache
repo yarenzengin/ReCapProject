@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "nSRE3nC+lq5VDwfNTkHWupdvpCJvijdTCeWeSe9EvJvs4PwDsXMJkbnf/8pOyrnjj0liC8jw6qbjznxuNfvTnw==",
+  "dgSpecHash": "gAFFzLOhOilqU/I6UKlAjzUOP90jaV9KuHU5OgSCro+9eCkPkb9ThqLES/eFafRIWLc8B5P2qo2MRETTsLqnhQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yaren\\source\\repos\\ReCapProject\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yaren\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\Yaren\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\Yaren\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.0\\autofac.extras.dynamicproxy.6.0.0.nupkg.sha512",
-    "C:\\Users\\Yaren\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\Yaren\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
+    "C:\\Users\\Yaren\\.nuget\\packages\\fluentvalidation\\9.5.2\\fluentvalidation.9.5.2.nupkg.sha512",
     "C:\\Users\\Yaren\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Yaren\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\Yaren\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
