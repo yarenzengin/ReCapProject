@@ -1585,6 +1585,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Autofac": "6.1.0",
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Autofac.Extras.DynamicProxy": "6.0.0",
           "Castle.Core": "4.4.1",
           "FluentValidation": "9.5.2",
