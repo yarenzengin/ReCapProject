@@ -41,6 +41,7 @@ namespace WebAPI.Controllers
             return BadRequest(result);
 
         }
+        //calisiyor
         [HttpPost("add")]
         public IActionResult Add(Car car)
         {

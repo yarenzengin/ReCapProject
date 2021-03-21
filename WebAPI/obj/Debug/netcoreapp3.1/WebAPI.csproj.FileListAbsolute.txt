@@ -71,3 +71,14 @@ C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.
 C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
 C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Web.Helpers.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\WebMatrix.Data.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\WebMatrix.WebData.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
