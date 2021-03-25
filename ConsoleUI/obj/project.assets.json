@@ -1695,6 +1695,7 @@
           "Autofac.Extras.DynamicProxy": "6.0.0",
           "Castle.Core": "4.4.1",
           "FluentValidation": "9.5.2",
+          "Microsoft.AspNetCore.Http": "2.2.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11",
           "Microsoft.IdentityModel.Tokens": "6.9.0",

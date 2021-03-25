@@ -2,6 +2,9 @@
 using Business.BusinessAspects;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
@@ -37,8 +40,18 @@ namespace Business.Concrete
             //Console.WriteLine("araba eklendi");
             
         }
+        [TransactionScopeAspect]
+        public IResult AddTransactionalTest(Car car)
+        {
+            Add(car);
+            if (car.DailyPrice < 90000)
+            {
+                throw new Exception("işlem geri alındı");
+            }
+            Add(car);
+            return null;
 
-       
+        }
 
         public IResult Delete(Car car)
         {
@@ -47,12 +60,13 @@ namespace Business.Concrete
             //Console.WriteLine("araba silindi");
 
         }
-
+        [CacheAspect]
+        [ PerformanceAspect(5)]
         public IDataResult<List<Car>> GetAll()
         {
             return new SuccessDataResult<List<Car>>( _carDal.GetAll(), Messages.CarsListed);
         }
-
+        [CacheAspect]
         public IDataResult<Car> GetById(int id)
         {
             return new SuccessDataResult<Car>(_carDal.Get(c=> c.CarId == id));
