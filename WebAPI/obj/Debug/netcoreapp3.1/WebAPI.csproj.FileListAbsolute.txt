@@ -82,3 +82,4 @@ C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\System.W
 C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\WebMatrix.Data.dll
 C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\WebMatrix.WebData.dll
 C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Yaren\source\repos\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

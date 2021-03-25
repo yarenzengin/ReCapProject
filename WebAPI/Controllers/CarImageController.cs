@@ -47,7 +47,7 @@ namespace WebAPI.Controllers
             return BadRequest(result.Message);
         }
 
-        //calismayan
+        
         [HttpPost("add")]
         public IActionResult Add([FromForm(Name = ("Image"))] IFormFile file, [FromForm] CarImage carImage)
         {

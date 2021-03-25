@@ -41,5 +41,13 @@ namespace Business.Constants
         public static string RentalUpdated = "Kiralanan arabalar sistemde güncellendi";
         public static string RentalInvalid = "Araba kiralanamadı";
         internal static string CarImageLimitExceeded = "Resim sınırı aşıldı";
+
+        public static string AuthorizationDenied = "Yetkiniz yok ";
+        public static string UserRegistered = "Kullanıcı  Kayıt Oldu";
+        public static string UserNotFound = "Kullanıcı bulunamadı";
+        public static string PasswordError = "Hatalı Şifre";
+        public static string SuccessfulLogin = "Başarılı giriş";
+        public static string UserAlreadyExists = "Bu kullanıcı zaten kayıtlı";
+        public static string AccessTokenCreated = " Token oluşturuldu";
     }
 }

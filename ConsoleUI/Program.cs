@@ -45,30 +45,30 @@ namespace ConsoleUI
         private static void CustomerTest()
         {
             CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
-            Customer customer = new Customer { CustomerId = 7, UserId = 7, CompanyName = " Faith " };
+            Customer customer = new Customer { CustomerId = 7, Id = 7, CompanyName = " Faith " };
             customerManager.Add(customer);
             Console.WriteLine(Messages
                 .CustomerAdded);
         }
 
-        private static void UserTest()
-        {
-            UserManager userManager = new UserManager(new EfUserDal());
-            User user = new User() { UserId = 7, FirstName = "şevval", LastName = "albayrak", Email = "sevvalalbayrak", Password = "bilemiyorumsevval" };
-            userManager.Add(user);
-            //userManager.Update(new User
-            //{
-            //    UserId = 5,
-            //    FirstName = "beyza",
-            //    LastName = "akyol",
-            //    Email = "beyzaakyol",
-            //    Password = "beyzakyoll"
-            //}
+        //private static void UserTest()
+        //{
+        //    UserManager userManager = new UserManager(new EfUserDal());
+        //    User user = new User() { Id = 7, FirstName = "şevval", LastName = "albayrak", Email = "sevvalalbayrak", Password = "bilemiyorumsevval" };
+        //    userManager.Add(user);
+        //    //userManager.Update(new User
+        //    //{
+        //    //    UserId = 5,
+        //    //    FirstName = "beyza",
+        //    //    LastName = "akyol",
+        //    //    Email = "beyzaakyol",
+        //    //    Password = "beyzakyoll"
+        //    //}
 
 
                
-            Console.WriteLine(Messages.UserAdded);
-        }
+        //    Console.WriteLine(Messages.UserAdded);
+        //}
 
         private static void ColorTest()
         {
