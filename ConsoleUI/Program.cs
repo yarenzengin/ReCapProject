@@ -100,24 +100,24 @@ namespace ConsoleUI
             }
         }
 
-        private static void CarTest()
-        {
-            CarManager carManager = new CarManager(new EfCarDal());
-            //Car car1 = new Car() { BrandId = 2, Description = "volkswagen", DailyPrice = 100000, ModelYear = 2009, ColorId = 3 };
-            //carManager.Delete(new Car { CarId = 1002, BrandId = 1, ColorId = 3, ModelYear = 1997, DailyPrice = 80000, Description = "BMW" });
-            var result = carManager.GetCarDetails();
-            if (result.Success == true)
-            {
-                foreach (var car in result.Data)
-                {
-                    Console.WriteLine(car.Description + "/" + car.ColorName);
-                }
-            }
-            else
-            {
-                Console.WriteLine(result.Message);
-            }
-            }
+        //private static void CarTest()
+        //{
+        //    CarManager carManager = new CarManager(new EfCarDal());
+        //    //Car car1 = new Car() { BrandId = 2, Description = "volkswagen", DailyPrice = 100000, ModelYear = 2009, ColorId = 3 };
+        //    //carManager.Delete(new Car { CarId = 1002, BrandId = 1, ColorId = 3, ModelYear = 1997, DailyPrice = 80000, Description = "BMW" });
+        //    var result = carManager.GetCarDetails();
+        //    if (result.Success == true)
+        //    {
+        //        foreach (var car in result.Data)
+        //        {
+        //            Console.WriteLine(car.Description + "/" + car.ColorName);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine(result.Message);
+        //    }
+        //    }
 
             //foreach (var car in carManager.GetCarDetails())
             //{

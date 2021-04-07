@@ -21,8 +21,8 @@ namespace DataAccess.Concrete.EntityFramework
                              on c.ColorId equals cr.ColorId
                              join b in context.Brands
                              on c.BrandId equals b.BrandId
-                             
-                         
+
+
                              select new CarDetailDto
                              {
                                  CarId = c.CarId,
@@ -30,15 +30,45 @@ namespace DataAccess.Concrete.EntityFramework
                                  ColorName = cr.ColorName,
                                  DailyPrice = c.DailyPrice,
                                  Description = c.Description
-                                
-                                
+
+
                              };
                 return result.ToList();
 
             }
+        //    public List<CarDetailDto> GetCarDetails(Expression<Func<CarDetailDto, bool>> filter = null)
+        //{
+        //    using (RentCarContext context = new RentCarContext())
+        //    {
+        //        var result = from brand in context.Brands
+        //                     join car in context.Cars
+        //                     on brand.BrandId equals car.BrandId
+        //                     join col in context.Colors
+        //                     on car.ColorId equals col.ColorId
+        //                     select new CarDetailDto
+        //                     {
+                                 
+        //                         CarId = car.CarId,
+        //                         BrandName = brand.BrandName,
+        //                         ColorName = col.ColorName,
+        //                         DailyPrice = car.DailyPrice,
+        //                         Description = car.Description,
+        //                         ModelYear = car.ModelYear,
+        //                         BrandId = brand.BrandId,
+        //                         ColorId = col.ColorId,
+        //                         ImagePath = (from a in context.CarImages where a.CarId == car.CarId select a.ImagePath).FirstOrDefault()
+        //                     };
+
+        //        return filter == null
+        //         ? result.ToList()
+        //         : result.Where(filter).ToList();
+
+        //    }
         }
     }
+
 }
+
 
 
     

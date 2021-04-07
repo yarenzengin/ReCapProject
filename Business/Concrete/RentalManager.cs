@@ -44,7 +44,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(), Messages.RentalsListed);
         }
 
-      
+        
 
         public IResult Update(Rental rental)
         {
